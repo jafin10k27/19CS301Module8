@@ -1,40 +1,38 @@
-# 19CS301Module8
-EXPTNO.8a Program to find Find the simple interest
+# 19CS301 Module8
 
-### Aim: To Write a Python Program to find Find the simple interest by getting the principal, rate and time value from the user
+## EXPT NO.8a Program to find Find the simple interest
+
+### Aim: To Find the simple interest by getting the principal, rate and time value from the user simple interest = (principal*rate*time)/100 [Note: Time must be in year so convert 9 months to year format]
+
 ### Algorithm:
+1.Read principal p, rate r, and time t (accept fractions like 9/12).
 
-STEP 1: Start.
+2.Define function simpleInterest(p, t, r) to return (p * r * t)/100.
 
-STEP 2: Define a function.
+3.Call the function with input values.
 
-STEP 3: Create variable 'p','r','t' for principal,rate of interest and time. STEP 4: Get the input of p,r and t from user.
-
-STEP 5 : Using the formula (p*r*t)/100 calculate the result. STEP 6: Print the result.
-
-STEP 7: Stop.
+4.Display the result.
 
 ### Program:
 ```
+## Reg no:212223020018
+## Name: Mohamed Jafin S
+p=int(input())
+r=float(input())
+t=eval(input())
 def simpleInterest(p,t,r):
-      si = p*t*r/100
-       return si
-p = eval(input())
-r = eval(input())
-t = eval(input())
+    return (p*r*t)/100
 ```
 ### Output:
-![image](https://github.com/user-attachments/assets/0cc71222-9697-4545-a937-b330407cbc02)
+![image](https://github.com/user-attachments/assets/8c94c86c-6bb6-4aa0-ab52-2a7a005baf2f)
 
+### Result: 
+Thus, the given program is implemented and executed successfully .
 
-
-
-
-### Result: Thus, the given program is implemented and executed successfully .
-
-EXPTNo.8b program to display elements from a list, present at odd index positions
+## EXPTNo.8b program to display elements from a list, present at odd index positions
 
 ### Aim: To Write a python program to display elements from a list, present at odd index positions
+
 ### Algorithm:
 
 STEP 1: Start.
@@ -53,63 +51,68 @@ STEP 7: Stop.
 
 ### Program:
 ```
-def odd(a):
-         l=[]
-          for i in range(a):
-x = int(input())
-l.append(x)
-for i in range(a):
-           if i%2!=0:
-                print(l[i], end=" ")
- a = int(input())
-odd(a)
+## Reg no:212223020018
+## Name: Mohamed Jafin S
+arr = []
+
+n=int(input())
+
+for i in range(n):
+    arr.insert(i, int(input()))
+for i in range(n):
+    if i%2!=0:
+        print(arr[i],end=" ")
 ```
 ### Output:
-![image](https://github.com/user-attachments/assets/a13fba7c-36b5-4227-98c1-82ab22a7804a)
+![image](https://github.com/user-attachments/assets/e6bdeef3-21aa-47fc-b410-7aa06fc779bd)
 
-### Result: Thus, the given program is implemented and executed successfully .
+### Result:
+Thus, the given program is implemented and executed successfully .
  
 
-EXPT NO>8C To Write a python program to Given the participants'	score sheet for your University Sports Day, you are required to find the runner-up score
-### Aim: To Write a python program to Given the participants' score sheet for your University Sports Day, you are required to find the runner-up score. You are given scores. Store them 
-         in a list and find the score of the runner-up.
+## EXPT NO>8C Write a program that has a dictionary of names of students and their marks in five subjects. Create another dictionary from this dictionary that has the name of the students and their total marks. Find out the topper and the score.
 
+### Aim: To Write a program that has a dictionary of names of students and their marks in five subjects.
 
 ### Algorithm:
-STEP 1: Start.
+1.Accept a dictionary with student names and list of 5 subject marks.
 
-STEP 2: Create a variable n.
+2.Create a new dictionary to store total marks using sum().
 
-STEP 3: Get the value of n from user.
+3.Loop through totals to find the maximum value and corresponding student.
 
-STEP 4: Get the number of inputs from user and split the input and append in a list. STEP 5: Using set function remove duplicates from the list.
-
-STEP 6: Using sort function reorder the list in ascending order. STEP 7: Print the result.
-
-STEP 8: Stop.
-
+4.Print the total marks and topper.
 
 ### Program:
-```if  name	== '   main    ':
-          n = int(input())
-          arr = map(int, input().split())
-          arr2 = list(set(arr))
-          arr2.sort()
-print(arr2[-2])
+```
+## Reg no: 212223020018
+## Name:Mohamed Jafin S
+marks=eval(input())
+total=0
+total_marks=marks.copy()
+for key,val in marks.items():
+    total=sum(val)
+    total_marks[key]=total
+print(total_marks)
+max=0
+topper=''
+for key,val in total_marks.items():
+    if val>max:
+        max=val
+        topper=key
+print("Topper is: ",topper,"with marks = ",max)
+```
 
 ### Output:
+![image](https://github.com/user-attachments/assets/f5d62fa3-0c07-4c52-9847-0b2eeaaa51ae)
  
-![image](https://github.com/user-attachments/assets/032939c0-f500-4bbb-9b19-87b3c54d8454)
-
- 
-
-### Result: Thus, the given program is implemented and executed successfully .
+### Result:
+Thus, the given program is implemented and executed successfully .
  
 
+## EX: 8.d program to square all the even numbers and cube all odd numbers from a list of integers
 
-EX: 8.d program to square all the even numbers and cube all odd numbers from a list of integers
 ### Aim: To Develop a python program to square all the even numbers and cube all odd numbers from a list of integers. Get the starting and ending range to create a list.
-
 
 ### Algorithm:
 
@@ -125,6 +128,8 @@ STEP 8 : Stop.
 
 ### Program:
 ```
+## Reg no:212223020018
+## Name:Mohamed Jafin S
 cube = lambda x: x**2 if x%2==0 else x**3
 def fun(f,l):
      l1=[]
@@ -135,11 +140,35 @@ f,l = int(input()),int(input())
 
 ```
 ### Output:
-![image](https://github.com/user-attachments/assets/4a9076d8-a2cf-44e1-b7d1-e638b7edf12f)
+![image](https://github.com/user-attachments/assets/0e8098a3-6593-439f-8f4e-08aaa5bee552)
 
+### Result: 
+Thus, the given program is implemented and executed successfully .
 
+## EX: 8.e
 
-### Result: Thus, the given program is implemented and executed successfully .
+### Aim: Write a python program to read and  then print the integer variable.men_stepped_on_the_moon= print()
+
+### Algorithm:
+1.Prompt the user to input an integer.
+
+2.Convert the input to an integer using int().
+
+3.Print the integer value.
+
+### Program:
+```
+## Reg no:212223020018
+## Name:Mohamed Jafin S
+men_stepped_on_the_moon=int(input())
+
+print(men_stepped_on_the_moon)
+
+```
+### Output:
+![image](https://github.com/user-attachments/assets/6a7b1179-37d2-4170-b0a9-fa726d10ba2f)
+
+### Result: 
+Thus, the given program is implemented and executed successfully .
  
-
-
+ 
